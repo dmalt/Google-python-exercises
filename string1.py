@@ -1,4 +1,3 @@
-#!/usr/bin/python -tt
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -85,21 +84,21 @@ def main():
     test(donuts(99), "Number of donuts: many")
 
     print
-    print "both_ends"
+    print("both_ends")
     test(both_ends("spring"), "spng")
     test(both_ends("Hello"), "Helo")
     test(both_ends("a"), "")
     test(both_ends("xyz"), "xyyz")
 
-    print
-    print "fix_start"
+    print()
+    print("fix_start")
     test(fix_start("babble"), "ba**le")
     test(fix_start("aardvark"), "a*rdv*rk")
     test(fix_start("google"), "goo*le")
     test(fix_start("donut"), "donut")
 
-    print
-    print "mix_up"
+    print()
+    print("mix_up")
     test(mix_up("mix", "pod"), "pox mid")
     test(mix_up("dog", "dinner"), "dig donner")
     test(mix_up("gnash", "sport"), "spash gnort")
