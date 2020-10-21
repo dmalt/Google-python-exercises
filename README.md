@@ -56,14 +56,17 @@ How to start a new problem:
 
 2. Then, in the notebook execute the following:
     ```bash
-    !git clone -b $problem https://github.com/$github_usename/Google-python-exercises.git $problem
+    !git clone -b {problem} https://github.com/{github_usename}/Google-python-exercises.git {problem}
     ```
 
-3. `<problem>` folder with a file `<problem>.py`. Write your code in `<problem>.py` an submit the solution.
+3. `<problem>` folder with a file `<problem>.py` will appear. To change directory to `<problem>` run
 
     ```bash
-    !conda install -c anaconda -y git
+    %cd {problem}
     ```
+
+4. Write your code in `<problem>.py` an submit the solution.
+
 
 How to submit:
 --------------
@@ -80,7 +83,7 @@ Style check of your code should be done with [flake8](#how-to-install-flake8-and
 
     Perform all three steps running the following in jupyter notebook:
     ```bash
-    !git add $problem.py
+    !git add {problem}.py
     !git commit --message 'Submitting problem'
     !git push
     ```
@@ -118,7 +121,7 @@ In jupyter notebook run:
 
 ```bash
 !conda install -c anaconda -y flake8
-!flake8 $problem --count --max-complexity=10 --max-line-length=80 --statistics --show-source
+!flake8 {problem} --count --max-complexity=10 --max-line-length=80 --statistics --show-source
 ```
 
 **NOTE** that your `problem` variable must be set for your notebook!
