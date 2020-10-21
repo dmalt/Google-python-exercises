@@ -40,7 +40,7 @@ columns, so the output looks better.
 
 """
 
-import random
+import random  # noqa
 import sys
 
 
