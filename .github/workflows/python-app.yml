@@ -3,9 +3,7 @@
 
 name: Python exercise submission
 
-on:
-    pull_request:
-        branches: [string1, string2, list1, list2, wordcount, mimic]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -27,5 +25,5 @@ jobs:
       run: |
         flake8 . --count --max-complexity=10 --max-line-length=80 --statistics --show-source
     - name: Test with pytest
-          run: |
-            pytest
+      run: |
+        pytest
