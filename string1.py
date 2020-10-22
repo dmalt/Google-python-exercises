@@ -27,7 +27,7 @@ def donuts(count):
     # +++your code here+++
     # LAB(begin solution)
     if count < 10:
-        return "Number of donuts: " +str(count)
+        return "Number of donuts: " + str(count)
     else:
         return "Number of donuts: many"
     # LAB(replace solution)
