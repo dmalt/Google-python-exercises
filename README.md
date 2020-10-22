@@ -9,18 +9,17 @@ The goal of the repository is to create a homework-checking platform which provi
 - automatic code testing to shorten the feedback loop
 - a useful tool for manual code review
 
-The former is achieved with GitHub workflows which run tests in the cloud
-each time the solution is submitted in the form of pull-request.
+For the first thing we use GitHub feature called Actions. They allow us to automatically test code
+each time the solution is submitted.  
+For the manual code examination we use GitHub's pull request review capabilities.
 
-For the latter we use GitHub's pull request review capabilities.
-
-To setup the code checking workflow we need three things:
+To setup the code-checking workflow we need three things:
 1. learn how to install and setup Git
 2. learn how to download code with Git
 3. learn how to submit solution with Git pull request
 
 Detailed instructions on these steps are provided below.  
-Although if you feel confident, you can skip instructions and
+If you feel confident though, you can skip the instructions and
 jump straight to the
 [jupyter notebook](https://github.com/dmalt/Google-python-exercises/blob/main/setup_example.ipynb)
 with setup code.
