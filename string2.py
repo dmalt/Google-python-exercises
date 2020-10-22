@@ -30,6 +30,7 @@ def verbing(s):
 # This dinner is good!
 def not_bad(s):
     # +++your code here+++
+    pass
     return
 
 
