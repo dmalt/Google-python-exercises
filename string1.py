@@ -47,7 +47,7 @@ def both_ends(s):
         return ""
     first2 = s[0:2]
     last2 = s[-2:]
-    return first2 + last2
+    return first2 +last2
     # LAB(replace solution)
     # return
     # LAB(end solution)
