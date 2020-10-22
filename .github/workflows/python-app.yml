@@ -3,9 +3,7 @@
 
 name: Python exercise submission
 
-on:
-    pull_request:
-        branches: [string1, string2, list1, list2, wordcount, mimic]
+on: [push, pull_request]
 
 jobs:
   build:
