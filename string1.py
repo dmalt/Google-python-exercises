@@ -23,14 +23,11 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    if count == int:
-        pass
     if count < 10:
         txt = "Number of donuts: {}"
-        return(txt.format(count))
+        return txt.format(count)
     else:
-        return("Number of donuts: many")
-    return
+        return "Number of donuts: many"
 
 
 # B. both_ends
@@ -40,10 +37,9 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
     if len(s) >= 2:
-        return s[0:2]+s[-2:]
+        return s[0:2] + s[-2:]
     else:
         return ""
-    return
 
 
 # C. fix_start
@@ -58,9 +54,7 @@ def both_ends(s):
 def fix_start(s):
     a = s[0]
     b = "*"
-    v = s.replace(a, b)
-    return(v.replace(b, s[0], 1))
-    return
+    return s[0] + s[1:].replace(a, b)
 
 
 # D. MixUp
@@ -73,8 +67,7 @@ def fix_start(s):
 def mix_up(a, b):
     c = a[2:]
     d = b[2:]
-    return(b[0:2]+c + " " + a[0:2]+d)
-    return
+    return b[0:2] + c + " " + a[0:2] + d
 
 
 # Provided simple test() function used in main() to print
