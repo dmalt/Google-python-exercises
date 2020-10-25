@@ -18,7 +18,7 @@
 def verbing(s):
     if len(s) < 3:
         return s
-    elif len(s) >= 3 and "ing" in s:
+    elif len(s) >= 3 and "ing" in s[-3:]:
         return s + "ly"
     else:
         return s + "ing"
@@ -42,7 +42,7 @@ def not_bad(s):
         else:
             return s
     else:
-        return(s)
+        return s
 
 
 # F. front_back
@@ -53,19 +53,13 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    if len(a) % 2 == 0:
-        a_front = a[:len(a)//2]
-        a_back = a[len(a)//2:]
-    else:
-        a_front = a[:len(a)//2 + 1]
-        a_back = a[len(a)//2+1:]
-    if len(b) % 2 == 0:
-        b_front = b[:len(b)//2]
-        b_back = b[len(b)//2:]
-    else:
-        b_front = b[:len(b)//2+1]
-        b_back = b[len(b)//2+1:]
-    return a_front + b_front + a_back + b_back
+    a_mid = len(a) // 2
+    b_mid = len(b) // 2
+    if len(a) % 2 == 1:  # add 1 if length is odd
+        a_mid = a_mid + 1
+    if len(b) % 2 == 1:
+        b_mid = b_mid + 1
+    return a[:a_mid] + b[:b_mid] + a[a_mid:] + b[b_mid:]
 
 
 # Simple provided test() function used in main() to print
