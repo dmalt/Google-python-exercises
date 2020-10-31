@@ -21,8 +21,11 @@
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
-    # +++your code here+++
-    return
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[:1] == word[-1:]:
+            count += 1
+    return count
 
 
 # B. front_x
@@ -33,12 +36,17 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    # +++your code here+++
-    return
+    first_x = [word for word in words if word.startswith("x") is True]
+    first_any = [word for word in words if word.startswith("x") is False]
+    first_x.sort()
+    first_any.sort()
+    return first_x + first_any
 
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     if got == expected:
         prefix = " OK "
@@ -68,6 +76,8 @@ def main():
         front_x(["mix", "xyz", "apple", "xanadu", "aardvark"]),
         ["xanadu", "xyz", "aardvark", "apple", "mix"],
     )
+
+    print()
 
 
 if __name__ == "__main__":
