@@ -14,6 +14,8 @@
 # modify the passed in list.
 def remove_adjacent(nums):
     new_list = []
+    if not nums:
+        return new_list
     new_list.append(nums[0])
     for num in nums:
         if num != new_list[-1]:
@@ -62,6 +64,7 @@ def main():
     print("remove_adjacent")
     test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
     test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
+    test(remove_adjacent([]), [])
 
     print()
     print("linear_merge")
